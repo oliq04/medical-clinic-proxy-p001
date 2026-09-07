@@ -1,0 +1,35 @@
+{
+  "pageSize": 5,
+  "currentPage": 0,
+  "total": 1,
+  "totalPages": 1,
+  "content": [
+    {
+      "id": 1,
+      "startDate": "2027-08-18T18:15:00",
+      "endDate": "2027-08-18T19:30:00",
+      "patient": {
+        "id": 1,
+        "idCardNo": 2004,
+        "firstName": "Grzegorz",
+        "lastName": "Zysk",
+        "phoneNumber": "+444444",
+        "birthday": "2004-12-03T00:00:00"
+      },
+      "doctor": {
+        "id": 1,
+        "firstName": "Ge332334",
+        "lastName": "Doctor",
+        "specialization": "CARDIOLOGY",
+        "clinics": []
+      },
+      "clinic": {
+        "id": 1,
+        "name": "Klinika3",
+        "town": "Warszawa",
+        "postCode": "11-223",
+        "address": "warszawska"
+      }
+    }
+  ]
+}

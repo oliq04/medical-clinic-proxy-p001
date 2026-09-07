@@ -1,5 +1,6 @@
-package org.example.medicalclinicproxyp001.feign;
+package org.example.medicalclinicproxyp001.client;
 
+import org.example.medicalclinicproxyp001.client.config.MedicalClinicFeignConfig;
 import org.example.medicalclinicproxyp001.model.DoctorDto;
 import org.example.medicalclinicproxyp001.model.PageableDto;
 import org.example.medicalclinicproxyp001.model.VisitDto;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 
-@FeignClient(name = "medicalclinic")
+@FeignClient(name = "medicalclinic", configuration = MedicalClinicFeignConfig.class)
 public interface MedicalClinicFeignClient {
 
     @GetMapping("/visit/patient/{id}")

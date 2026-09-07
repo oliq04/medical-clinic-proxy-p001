@@ -1,14 +1,12 @@
 package org.example.medicalclinicproxyp001.service;
 
-import org.example.medicalclinicproxyp001.feign.MedicalClinicFeignClient;
+import org.example.medicalclinicproxyp001.client.MedicalClinicFeignClient;
 import lombok.RequiredArgsConstructor;
-import org.example.medicalclinicproxyp001.model.DoctorDto;
 import org.example.medicalclinicproxyp001.model.PageableDto;
 import org.example.medicalclinicproxyp001.model.VisitDto;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Service
 @RequiredArgsConstructor

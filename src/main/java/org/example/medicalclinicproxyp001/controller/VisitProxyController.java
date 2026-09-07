@@ -48,7 +48,7 @@ public class VisitProxyController {
         return visitService.visitsAssignedToDoctor(id, page, size);
     }
 
-    @PatchMapping("/visit/{id}")
+    @PatchMapping("/{id}")
     public VisitDto cancelVisit(@PathVariable Long id) {
         return visitService.cancelVisit(id);
     }
