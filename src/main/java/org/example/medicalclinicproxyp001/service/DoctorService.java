@@ -13,6 +13,6 @@ public class DoctorService {
     private final MedicalClinicFeignClient medicalClinicFeignClient;
 
     public PageableDto<DoctorDto> getDoctors(int page, int size, String specialization) {
-        return medicalClinicFeignClient.doctorsOfSpecialization(page, size, specialization);
+        return medicalClinicFeignClient.getDoctors(page, size, specialization);
     }
 }

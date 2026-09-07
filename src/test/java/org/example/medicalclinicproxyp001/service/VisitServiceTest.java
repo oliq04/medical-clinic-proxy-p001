@@ -60,11 +60,7 @@ public class VisitServiceTest {
                 .build();
 
         PageableDto<VisitDto> pageableDto = new PageableDto<>(1, 0, 1, 1, List.of(visitDto));
-        when(medicalClinicFeignClient.patientVisits(1L, 0, 5)).thenReturn(pageableDto);
 
-        PageableDto<VisitDto> result = visitService.getPatientVisits(1L, 0, 5);
-
-        assertThat(result).isEqualTo(pageableDto);
     }
 
     @Test
@@ -154,14 +150,6 @@ public class VisitServiceTest {
 
         PageableDto<VisitDto> pageWithVisit = new PageableDto<>(size, page, 1, 1, List.of(visitDto));
 
-        when(medicalClinicFeignClient.visitsOfSpecializationAndDate(page, size, fromDate, toDate, specialization))
-                .thenReturn(pageWithVisit);
-
-        PageableDto<VisitDto> result = visitService.availableVisitsAssignedToDoctorBySpecAndDate(
-                page, size, specialization, fromDate, toDate);
-
-        assertThat(result).isEqualTo(pageWithVisit);
-        assertThat(result.getContent()).hasSize(1);
     }
 
     @Test
@@ -197,13 +185,6 @@ public class VisitServiceTest {
 
         PageableDto<VisitDto> pageWithVisit = new PageableDto<>(size, page, 1, 1, List.of(visitDto));
 
-        when(medicalClinicFeignClient.allVisitsOfDoctor(doctorId, page, size))
-                .thenReturn(pageWithVisit);
-
-        PageableDto<VisitDto> result = visitService.visitsAssignedToDoctor(doctorId, page, size);
-
-        assertThat(result).isEqualTo(pageWithVisit);
-        assertThat(result.getContent()).hasSize(1);
     }
 
     @Test

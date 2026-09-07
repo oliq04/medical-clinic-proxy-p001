@@ -15,13 +15,4 @@ public class MedicalProxyExceptionHandler {
         return ResponseEntity.status(ex.getStatus())
                 .body(new ErrorMessage(LocalDateTime.now(), ex.getMessage(), ex.getStatus()));
     }
-
-    @ExceptionHandler(FeignException.class)
-    public ResponseEntity<ErrorMessage> handleFeignException(FeignException ex) {
-        HttpStatus status = HttpStatus.resolve(ex.status());
-        if (status == null) status = HttpStatus.INTERNAL_SERVER_ERROR;
-        return ResponseEntity.status(status)
-                .body(new ErrorMessage(LocalDateTime.now(), "Connection failed", status));
-    }
-
 }
