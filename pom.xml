@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>medical-clinic-proxy-p001</artifactId>
+    <artifactId>medical-clinic-proxy</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>medical-clinic-proxy-p001</name>
     <description>medical-clinic-proxy-p001</description>
@@ -48,6 +48,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webmvc-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.wiremock.integrations</groupId>
+            <artifactId>wiremock-spring-boot-standalone</artifactId>
+            <version>4.1.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
