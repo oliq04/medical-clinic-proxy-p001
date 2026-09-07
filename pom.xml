@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>medical-clinic-proxy-p001</artifactId>
+    <artifactId>medical-clinic-proxy</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>medical-clinic-proxy-p001</name>
     <description>medical-clinic-proxy-p001</description>
